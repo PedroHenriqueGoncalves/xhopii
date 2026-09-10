@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Cadastrar Loja — Xhopii</title>
+  <meta name="description" content="Cadastre uma nova loja parceira na plataforma Xhopii.">
+  <link rel="icon" href="../assets/img/logo.png" type="image/png">
+  
+  <link rel="stylesheet" href="../assets/style.css">
+</head>
+<body>
+  <header class="navbar">
+    <div class="navbar__linha">
+      <a href="home.html" class="navbar__marca">
+        <img src="../assets/img/logo.png" alt="Xhopii">
+        Xhopii
+      </a>
+      <button class="navbar__burger" type="button" aria-label="Abrir menu" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+      <nav class="navbar__nav" aria-label="Navegação principal">
+        <a href="home.html">Home</a>
+        <a href="cadastro-cliente.html">Cadastro Cliente</a>
+        <a href="cadastro-funcionario.html">Cadastro Funcionário</a>
+        <a href="cadastro-produto.html">Cadastro Produto</a>
+        <a href="clientes.html">Ver Clientes</a>
+        <a href="funcionarios.html">Ver Funcionários</a>
+        <a href="produtos.html">Ver Produtos</a>
+        <div class="navbar__dropdown">
+          <button class="navbar__dropdown-toggle" type="button" aria-haspopup="true" aria-expanded="false">Mais ▾</button>
+          <div class="navbar__dropdown-menu">
+            <a href="cadastro-cupom.html">Cadastrar Cupom</a>
+            <a href="cadastro-loja.html">Cadastrar Loja</a>
+            <a href="loja.html">Ver Lojas</a>
+            <a href="cupons.html">Ver Cupons</a>
+          </div>
+        </div>
+      </nav>
+      <a href="../index.html" class="navbar__sair">Sair</a>
+    </div>
+  </header>
+  <main class="pagina-cadastro">
+    <div class="cartao-form">
+      <h1>Cadastrar Loja</h1>
+      <form id="form-loja" novalidate>
+                  <div class="campo">
+            <label for="loja-nome">Nome da Loja</label>
+            <input type="text" id="loja-nome" name="loja-nome" required>
+          </div>
+                  <div class="linha-dupla">
+          <div class="campo">
+            <label for="loja-cnpj">CNPJ</label>
+            <input type="text" id="loja-cnpj" name="loja-cnpj" placeholder="00.000.000/0000-00" required>
+          </div>
+          <div class="campo">
+            <label for="loja-categoria">Categoria</label>
+            <select id="loja-categoria" name="loja-categoria" required>
+              <option value="" selected disabled>Selecione...</option>
+              <option value="vestuario">Vestuário</option>
+              <option value="eletronicos">Eletrônicos</option>
+              <option value="casa">Casa e Decoração</option>
+              <option value="beleza">Beleza</option>
+              <option value="esporte">Esporte e Lazer</option>
+            </select>
+          </div>
+          </div>
+                  <div class="campo">
+            <label for="loja-descricao">Descrição</label>
+            <textarea id="loja-descricao" name="loja-descricao" rows="2" required></textarea>
+          </div>
+                  <div class="campo">
+            <label for="loja-endereco">Endereço</label>
+            <input type="text" id="loja-endereco" name="loja-endereco" required>
+          </div>
+                  <div class="linha-dupla">
+          <div class="campo">
+            <label for="loja-telefone">Telefone</label>
+            <input type="tel" id="loja-telefone" name="loja-telefone" placeholder="(00) 00000-0000" required>
+          </div>
+          <div class="campo">
+            <label for="loja-email">Email</label>
+            <input type="email" id="loja-email" name="loja-email" required>
+          </div>
+          </div>
+                  <div class="campo-arquivo">
+            <span>Selecionar logo da loja:</span>
+            <div class="campo-arquivo__linha">
+              <label class="btn btn-secundario" for="loja-logo">Escolher arquivo</label>
+              <input type="file" id="loja-logo" name="loja-logo" accept="image/*" class="sr-only">
+              <span class="campo-arquivo__nome">Nenhum arquivo escolhido</span>
+            </div>
+          </div>
+        <button type="submit" class="btn btn-primario btn-bloco">CADASTRAR</button>
+      </form>
+    </div>
+  </main>
+  <footer class="rodape">
+    <div class="rodape__colunas">
+      <div class="rodape__coluna">
+        <h2>Atendimento ao Cliente</h2>
+        <ul>
+          <li><a href="#">Central de Ajuda</a></li>
+          <li><a href="#">Como Comprar</a></li>
+          <li><a href="#">Métodos de Pagamento</a></li>
+          <li><a href="#">Garantia Xhopii</a></li>
+          <li><a href="#">Devolução e Reembolso</a></li>
+          <li><a href="#">Fale Conosco</a></li>
+          <li><a href="#">Ouvidoria</a></li>
+        </ul>
+      </div>
+      <div class="rodape__coluna">
+        <h2>Sobre a Xhopii</h2>
+        <ul>
+          <li><a href="#">Sobre Nós</a></li>
+          <li><a href="#">Políticas Xhopii</a></li>
+          <li><a href="#">Política de Privacidade</a></li>
+          <li><a href="#">Programa de Afiliados da Xhopii</a></li>
+          <li><a href="#">Seja um Entregador Xhopii</a></li>
+          <li><a href="#">Ofertas Relâmpago</a></li>
+          <li><a href="#">Xhopii Blog</a></li>
+          <li><a href="#">Imprensa</a></li>
+        </ul>
+      </div>
+      <div class="rodape__coluna">
+        <h2>Pagamento</h2>
+        <div class="rodape__pagamentos">
+          <span class="rodape__badge">PIX</span>
+          <span class="rodape__badge">Boleto</span>
+          <span class="rodape__badge">Visa</span>
+          <span class="rodape__badge">Mastercard</span>
+          <span class="rodape__badge">Amex</span>
+          <span class="rodape__badge">Elo</span>
+        </div>
+      </div>
+      <div class="rodape__coluna">
+        <h2>Siga-nos</h2>
+        <div class="rodape__redes">
+          <a class="rodape__rede" href="#"><span class="rodape__rede-icone">IG</span> Instagram</a>
+          <a class="rodape__rede" href="#"><span class="rodape__rede-icone">X</span> Twitter</a>
+          <a class="rodape__rede" href="#"><span class="rodape__rede-icone">FB</span> Facebook</a>
+          <a class="rodape__rede" href="#"><span class="rodape__rede-icone">YT</span> YouTube</a>
+          <a class="rodape__rede" href="#"><span class="rodape__rede-icone">in</span> LinkedIn</a>
+        </div>
+        <div class="rodape__qrcode"><img src="../assets/img/qrcode.png" alt="QR Code para baixar o app Xhopii"></div>
+      </div>
+      <div class="rodape__coluna">
+        <h2>Baixe o App</h2>
+        <div class="rodape__apps">
+          <span class="rodape__app-badge">▶ Google Play</span>
+          <span class="rodape__app-badge">🍎 App Store</span>
+        </div>
+      </div>
+    </div>
+    <div class="rodape__base">© 2026 Xhopii. Todos os direitos acadêmicos reservados.</div>
+  </footer>
+  <script src="../assets/script.js"></script>
+  <script>Xhopii.handleCadastro('form-loja', 'loja.html', 'Loja cadastrada com sucesso!');</script>
+</body>
+</html>

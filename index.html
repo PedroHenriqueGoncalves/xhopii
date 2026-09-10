@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Entrar — Xhopii</title>
+  <meta name="description" content="Entre na sua conta Xhopii para continuar comprando.">
+  <link rel="icon" href="assets/img/logo.png" type="image/png">
+  
+  <link rel="stylesheet" href="assets/style.css">
+</head>
+<body>
+  <header class="topo-simples">
+    <a href="#" class="topo-simples__marca">
+      <img src="assets/img/logo.png" alt="Xhopii">
+      <span class="marca-nome">Xhopii</span>
+      <span class="topo-simples__separador">|</span>
+      <span class="topo-simples__contexto">Entre</span>
+    </a>
+    <a href="#" class="topo-simples__ajuda">Precisa de ajuda?</a>
+  </header>
+  <main class="tela-auth">
+    <div class="tela-auth__arte">
+      <img src="assets/img/login-art.png" alt="Ilustração Xhopii">
+    </div>
+    <div class="tela-auth__conteudo">
+      <div class="cartao-auth">
+        <h1>Login</h1>
+        <form id="form-login" novalidate>
+          <div class="campo">
+            <label for="login-email">Email</label>
+            <input type="email" id="login-email" name="email" required autocomplete="username">
+            <small class="erro">Informe um email válido.</small>
+          </div>
+          <div class="campo">
+            <label for="login-senha">Senha</label>
+            <input type="password" id="login-senha" name="senha" required autocomplete="current-password">
+            <small class="erro">Informe sua senha.</small>
+          </div>
+          <div class="auth-links">
+            <a href="view/redefinir-senha.html">Esqueci minha senha</a>
+            <a href="#" class="link-sms">Fazer login com SMS</a>
+          </div>
+          <div class="mensagem-envio">Login efetuado! Redirecionando para a Home...</div>
+          <button type="submit" class="btn btn-primario">ENTRE</button>
+        </form>
+        <div class="divisor">OU</div>
+        <div class="login-social">
+          <button type="button" class="btn btn-secundario">Facebook</button>
+          <button type="button" class="btn btn-secundario">Google</button>
+          <button type="button" class="btn btn-secundario">Apple</button>
+        </div>
+        <p class="auth-rodape">Novo na Xhopii? <a href="view/cadastro-cliente.html">Cadastrar</a></p>
+      </div>
+    </div>
+  </main>
+  <footer class="rodape">
+    <div class="rodape__colunas">
+      <div class="rodape__coluna">
+        <h2>Atendimento ao Cliente</h2>
+        <ul>
+          <li><a href="#">Central de Ajuda</a></li>
+          <li><a href="#">Como Comprar</a></li>
+          <li><a href="#">Métodos de Pagamento</a></li>
+          <li><a href="#">Garantia Xhopii</a></li>
+          <li><a href="#">Devolução e Reembolso</a></li>
+          <li><a href="#">Fale Conosco</a></li>
+          <li><a href="#">Ouvidoria</a></li>
+        </ul>
+      </div>
+      <div class="rodape__coluna">
+        <h2>Sobre a Xhopii</h2>
+        <ul>
+          <li><a href="#">Sobre Nós</a></li>
+          <li><a href="#">Políticas Xhopii</a></li>
+          <li><a href="#">Política de Privacidade</a></li>
+          <li><a href="#">Programa de Afiliados da Xhopii</a></li>
+          <li><a href="#">Seja um Entregador Xhopii</a></li>
+          <li><a href="#">Ofertas Relâmpago</a></li>
+          <li><a href="#">Xhopii Blog</a></li>
+          <li><a href="#">Imprensa</a></li>
+        </ul>
+      </div>
+      <div class="rodape__coluna">
+        <h2>Pagamento</h2>
+        <div class="rodape__pagamentos">
+          <span class="rodape__badge">PIX</span>
+          <span class="rodape__badge">Boleto</span>
+          <span class="rodape__badge">Visa</span>
+          <span class="rodape__badge">Mastercard</span>
+          <span class="rodape__badge">Amex</span>
+          <span class="rodape__badge">Elo</span>
+        </div>
+      </div>
+      <div class="rodape__coluna">
+        <h2>Siga-nos</h2>
+        <div class="rodape__redes">
+          <a class="rodape__rede" href="#"><span class="rodape__rede-icone">IG</span> Instagram</a>
+          <a class="rodape__rede" href="#"><span class="rodape__rede-icone">X</span> Twitter</a>
+          <a class="rodape__rede" href="#"><span class="rodape__rede-icone">FB</span> Facebook</a>
+          <a class="rodape__rede" href="#"><span class="rodape__rede-icone">YT</span> YouTube</a>
+          <a class="rodape__rede" href="#"><span class="rodape__rede-icone">in</span> LinkedIn</a>
+        </div>
+        <div class="rodape__qrcode"><img src="assets/img/qrcode.png" alt="QR Code para baixar o app Xhopii"></div>
+      </div>
+      <div class="rodape__coluna">
+        <h2>Baixe o App</h2>
+        <div class="rodape__apps">
+          <span class="rodape__app-badge">▶ Google Play</span>
+          <span class="rodape__app-badge">🍎 App Store</span>
+        </div>
+      </div>
+    </div>
+    <div class="rodape__base">© 2026 Xhopii. Todos os direitos acadêmicos reservados.</div>
+  </footer>
+  <script src="assets/script.js"></script>
+  <script>
+    Xhopii.handleFormAuth('form-login', 'view/home.html', 'Login efetuado! Redirecionando para a Home...');
+    document.querySelector('.link-sms').addEventListener('click', function (e) {
+      e.preventDefault();
+      Xhopii.showToast('Login por SMS é apenas ilustrativo neste projeto.');
+    });
+    document.querySelectorAll('.login-social button').forEach(function (btn) {
+      btn.addEventListener('click', function () {
+        Xhopii.showToast('Login social é apenas ilustrativo neste projeto.');
+      });
+    });
+  </script>
+</body>
+</html>
